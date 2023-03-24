@@ -1,17 +1,23 @@
 #!/venv/bin/python
 
 import rospy
+import random
 from std_msgs.msg import String
+from tvilling.msg import Tvilling
 
 def talker():
-    pub = rospy.Publisher('chatter', String, queue_size=10)
-    rospy.init_node('talker', anonymous=True)
+    pub = rospy.Publisher('servos', Tvilling, queue_size=10)
+    rospy.init_node('robo', anonymous=True)
     rate = rospy.Rate(10) # 10hz
     
     while not rospy.is_shutdown():
-        hello_str = "hello world %s" % rospy.get_time()
-        rospy.loginfo(hello_str)
-        pub.publish(hello_str)
+        n = random.randint(0, 180)
+       
+        msg = Tvilling()
+        msg.Servo_id = 1
+        msg.Ang = n
+
+        pub.publish(msg)
         rate.sleep()
 
 if __name__ == '__main__':
