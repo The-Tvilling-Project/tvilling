@@ -1,0 +1,8 @@
+prefix=/home/nata-brain/tvilling/install
+
+Name: arduinobot_remote
+Description: Description of arduinobot_remote
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

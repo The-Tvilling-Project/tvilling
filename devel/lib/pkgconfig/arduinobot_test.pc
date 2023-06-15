@@ -1,0 +1,8 @@
+prefix=/home/nata-brain/tvilling/devel
+
+Name: arduinobot_test
+Description: Description of arduinobot_test
+Version: 0.0.0
+Cflags: -I/home/nata-brain/tvilling/devel/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,8 @@
+prefix=/home/nata-brain/tvilling/devel
+
+Name: arduinobot_controller
+Description: Description of arduinobot_controller
+Version: 0.0.0
+Cflags: -I/home/nata-brain/tvilling/devel/include -I/home/nata-brain/tvilling/src/arduinobot_controller/include
+Libs: -L${prefix}/lib 
+Requires: controller_manager hardware_interface
